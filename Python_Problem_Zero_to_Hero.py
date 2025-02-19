@@ -123,4 +123,148 @@ radius = float(input("Enter the radius of the circle: "))
 area = math.pi * radius ** 2
 print(f"{area:.1f}")
 
+ 11)Check if a Number is Positive, Negative, or Zero
+📌 Problem: Write a program to check if a given number is positive, negative, or zero.
+
+🔹 Input:
+5
+🔹 Output:
+Positive
+🔹 Input:
+-3
+🔹 Output:
+Negative
+
+🔹 Input:
+0
+🔹 Output:
+Zero
+
+SOURCE CODE:
+num = int(input("Enter a number :"))
+if num>0:
+    print("Positive number")
+elif num==0:
+    print("Zero")
+else:
+    print("Negetive")
+
+12) Sum of First N Natural Numbers
+📌 Problem: Write a program to calculate the sum of the first N natural numbers.
+
+🔹 Formula: Sum = n * (n + 1) / 2
+
+🔹 Input:
+10
+🔹 Output:
+55
+Method - 1
+num=int(input())
+sum1=num*(num+1)/2
+print(int(sum1)
+
+Method-2 
+num=10 
+sum1=0 
+for i in range(num+1):
+    sum1+=i 
+print(sum1)
+
+13) Multiplication Table of a Given Number
+📌 Problem: Write a program to print the multiplication table of a given number.
+
+🔹 Input:
+3
+🔹 Output:
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+...
+3 x 10 = 30
+
+Method - 1
+num=3 
+for i in range(1,11):
+   print(num,"x",i,"=",num*i)
+
+Method-2 
+num=3
+i=1 
+while i<=10:
+    print(num,"x",i,"=",num*i)
+    i+=1
+
+14) Factorial of a Number
+📌 Problem: Write a program to calculate the factorial of a number.
+
+🔹 Input:
+5
+🔹 Output:
+120
+
+Method-1 
+num=5 
+fact=1 
+for i in range(1,num+1):
+    fact=fact*i 
+print(f"factorial of {num} is : {fact}")
+
+
+    
+15) Reverse a Given Number
+📌 Problem: Write a program to reverse the digits of a number.
+
+🔹 Input:
+1234
+🔹 Output:
+4321
+
+Method-1 
+
+num=1234
+b=str(num)
+rev=b[::-1]
+print(rev)
+
+Method-2 
+num=1234 
+temp=num 
+rev=0
+while temp>0:
+    rem=temp%10 
+    rev=rev*10+rem 
+    temp//=10 
+print(rev)
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
