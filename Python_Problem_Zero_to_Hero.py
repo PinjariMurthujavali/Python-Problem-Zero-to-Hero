@@ -236,6 +236,240 @@ while temp>0:
     temp//=10 
 print(rev)
 
+16) Check if a Number is Prime
+📌 Problem: Write a program to check if a given number is prime.
+
+🔹 Input:
+7
+🔹 Output:
+Prime
+🔹 Input:
+10
+🔹 Output:
+Not Prime
+
+
+SOURCE CODE:
+def is_prime(num):
+    if num<=1:
+        return False 
+    for i in range(2,int(num**0.5)+1):
+        if num%i==0:
+            return False
+    return True 
+num=int(input())
+if is_prime(num):
+    print("prime")
+else:
+    print("not prime")
+
+
+
+18) Find the Greatest Common Divisor (GCD)
+📌 Problem: Write a program to find the GCD of two numbers.
+
+🔹 Input:
+8 12
+🔹 Output:
+4
+
+Source code:
+
+def Gcd(a,b):
+    while b:
+        a,b=b,a%b 
+    return a 
+a,b=map(int,input().split(" "))
+print(Gcd(a,b))
+
+
+18) Check if a String is a Palindrome
+📌 Problem: Write a program to check if a given string is a palindrome.
+
+🔹 Input:
+madam
+🔹 Output:
+Palindrome
+🔹 Input:
+hello
+🔹 Output:
+Not a Palindrome
+
+Method - 1
+name = input()
+pal = name[::-1]
+if pal == name:
+    print("Palindrome")
+else:
+    print("Not palindrome number")
+ 
+
+Method- 2
+
+def pal(name):
+    pali=name[::-1]
+    return pali 
+
+name=input()
+if pal(name)==name:
+    print("palindrome")
+else:
+    print("not palindrome")
+    
+19 ) Print Fibonacci Series Up to N Terms
+📌 Problem: Write a program to print the Fibonacci series up to N terms.
+
+🔹 Input:
+5
+🔹 Output:
+0 1 1 2 3
+
+def fibonacci(n):
+    if n<=1:
+        return n 
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+n=int(input())
+if n<=1:
+    print("Please enter positive integer")
+else:
+    for i in range(n):
+        print(fibonacci(i),end=" ")
+
+
+20) Count the Number of Vowels in a String
+📌 Problem: Write a program to count the number of vowels in a given string.
+
+🔹 Input:
+hello world
+🔹 Output:
+3
+
+def vowels(text):
+    vowels ="AEIOUaeiou"
+    count=0 
+    for i in text:
+        if i in vowels:
+            count+=1 
+    return count 
+text=input()
+print(vowels(text)) 
+
+
+
+21) Find the Maximum Element in a List
+📌 Problem: Write a program to find the maximum number in a list.
+
+🔹 Input:
+[3, 7, 2, 9, 5]
+🔹 Output:
+9
+
+SOURCE CODE:
+
+num=list(map(int,input().split(" ")))
+print(max(num))
+
+Method-2 
+
+def find_maximum(numbers):
+    if not numbers:
+        return None 
+    maximum=numbers[0]
+    for number in numbers:
+        if number>maximum:
+            maximum=number
+    return maximum
+
+numbers=list(map(int,input().split(" ")))
+print("Maximum number is :",find_maximum(numbers))
+
+
+22) Reverse a String using a Function
+📌 Problem: Write a function to reverse a string.
+🔹 Input:
+hello
+🔹 Output:
+olleh
+
+Method-1 
+def reverse_string(name):
+    return name[::-1]
+
+name=input()
+print(reverse_string(name))
+
+Method-2 
+name=input()
+rev=name[::-1]
+print(rev) 
+
+23) Find the Sum of Elements in a List
+📌 Problem: Write a program to calculate the sum of all elements in a list.
+
+🔹 Input:
+[4, 2, 6, 8]
+🔹 Output:
+20
+
+
+SOURCE CODE:
+list_of_sum=list(map(int,input().split(" ")))
+sum1=0
+for i in list_of_sum:
+    sum1=sum1+i 
+print(sum1) 
+
+
+24) Check if a Number is a Perfect Square
+📌 Problem: Write a program to check if a number is a perfect square.
+
+🔹 Input:
+16
+🔹 Output:
+Perfect Square
+🔹 Input:
+10
+🔹 Output:
+Not a Perfect Square
+
+
+SOURCE CODE:
+import math
+def perfect_square(num):
+    if num < 0:
+        return "Not a square number"
+    sq = int(math.sqrt(num)) 
+    return "Perfect square number" if sq * sq == num else "Not a square number"
+
+num = int(input())
+print(perfect_square(num))
+
+
+
+25) Find the Second Largest Element in a List
+📌 Problem: Write a program to find the second largest number in a list.
+
+🔹 Input:
+[10, 5, 8, 12, 15]
+🔹 Output:
+12
+
+SOURCE CODE:
+
+def second_largest_number(numbers):
+    unique_num=sorted(list(set(numbers)),reverse=True)
+    if len(unique_num)<2:
+        return None 
+    else:
+        return unique_num[1]
+numbers=list(map(int,input().split(" ")))
+print(second_largest_number(numbers))
+
+
+
+
+
 
 
 
