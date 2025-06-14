@@ -468,6 +468,451 @@ print(second_largest_number(numbers))
 
 
 
+PROBLEM - 26:
+
+# Write a Python program to print the following string in a specific format (see the output). Go to the editor
+# Sample String : "Twinkle, twinkle, little star, How I wonder what you are! Up above the world so high, Like a diamond in the sky. Twinkle, twinkle, little star, How I wonder what you are" 
+# Output :
+# Twinkle, twinkle, little star,
+#     How I wonder what you are! 
+#         Up above the world so high,
+#         Like a diamond in the sky. 
+# Twinkle, twinkle, little star, 
+#     How I wonder what you are
+# ----------------------------------------------------
+# Hints
+# Using \n (newline) and \t (tab) to format the string
+
+
+
+SOLUTION:
+
+
+print("Twinkle, twinkle, little star, \n\tHow I wonder what you are! \n\t\tUp above the world so high, \n\t\tLike a diamond in the sky. \nTwinkle, twinkle, little star, \n\tHow I wonder what you are!") 
+
+
+
+
+PROBLEM - 27:
+
+
+# Create a program that asks the user to enter their name and their age.
+# Print out a message addressed to them that tells them the year that they will turn 100 years old.
+
+
+
+SOLUTION:
+
+
+name = input("What is your name: ")
+age = int(input("How old are you: "))
+year = str((2014 - age)+100)
+print(name + " will be 100 years old in the year " + year)
+
+
+
+PROBLEM - 28:
+
+
+# Write a Python program that accepts an integer (n) and computes the value of n+nn+nnn. Go to the editor
+# Sample value of n is 5 
+# Expected Result : 615
+
+
+SOLUTION:
+
+# Accept input from the user
+n = input("Enter an integer: ")
+
+# Compute n + nn + nnn
+result = int(n) + int(n*2) + int(n*3)
+
+# Display the result
+print("Result:", result)
+
+
+
+#PROBLEM - 29:
+
+
+# Write a Python program which takes two digits m (row) and n (column) as input and generates a two-dimensional array. 
+# The element value in the i-th row and j-th column of the array should be i*j.
+# Note :
+# i = 0,1.., m-1 
+# j = 0,1, n-1.
+# Input
+# Input number of rows: 3                                                                                       
+# Input number of columns: 4  
+# Output
+# [[0, 0, 0, 0], [0, 1, 2, 3], [0, 2, 4, 6]]
+ 
+row_num = int(input("Input number of rows: "))
+col_num = int(input("Input number of columns: "))
+multi_list = [[0 for col in range(col_num)] for row in range(row_num)]
+for row in range(row_num):
+    for col in range(col_num):
+        multi_list[row][col]= row*col
+print(multi_list)
+
+
+       
+
+       
+#PROBLEM - 30
+# Write a Python program to check a triangle is valid or not 
+
+def triangle_check(l1,l2,l3):
+    if (l1>l2+l3) or (l2>l1+l3) or (l3>l1+l2):
+        print('No, the lengths wont form a triangle')
+    elif (l1==l2+l3) or (l2==l1+l3) or (l3==l1+l2):
+        print('yes, it can form a degenerated triangle')
+    else:
+        print('Yes, a triangle can be formed out of it')
+length1 = int(input('enter side 1\n'))
+length2 = int(input('enter side 2\n'))
+length3 = int(input('enter side 3\n'))
+triangle_check(length1,length2,length3)
+
+
+#PROBLEM - 31
+# Write a Python program to construct the following pattern, using a nested loop number.
+#input  : 10
+
+#Output :  
+
+       
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+10101010101010101010
+999999999
+88888888
+7777777
+666666
+55555
+4444
+333
+22
+1
+
+
+#SOURCE CODE:
+
+num=int(input())
+for i in range(1,num+1):
+    for j in range(1,i+1):
+        print(i,end="")
+    print()
+for i in range(num-1,0,-1):
+    for j in range(1,i+1):
+        print(i,end="")
+    print()
+
+
+
+#PROBLEM = 32
+
+# Write a Python program to construct the following pattern, using a nested loop number.
+# 1                                                                                                             
+# 22                                                                                                            
+# 333                                                                                                           
+# 4444                                                                                                          
+# 55555                                                                                                         
+# 666666                                                                                                        
+# 7777777                                                                                                       
+# 88888888                                                                                                      
+# 999999999  
+
+#SOURCE CODE:
+
+num=int(input())
+for i in range(1,num+1):
+    for j in range(1,i+1):
+        print(i,end="")
+    print()
+
+
+#METHOD - 2
+
+for i in range(10):
+    print(str(i) * i)
+
+
+
+#PROBLEM - 33
+
+#  Write a Python program to construct the following pattern, using a nested for loop.
+# * 
+# * * 
+# * * * 
+# * * * * 
+# * * * * * 
+# * * * * 
+# * * * 
+# * * 
+# *
+
+
+#source code
+
+num=int(input())
+for i in range(1,num+1):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    print()
+for i in range(num-1,0,-1):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    print()
+
+
+#PROBLEM - 34
+
+#  Write a Python program to construct the following pattern, using a nested for loop.
+# * 
+# * * 
+# * * * 
+# * * * * 
+# * * * * *
+
+
+#SOURCE CODE:
+
+
+num=int(input())
+for i in range(1,num+1):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    print() 
+
+   
+
+#PROBLEM - 35
+
+# Write a Python program that accepts a string and calculate the number of digits and letters
+# Sample Data : "Python 3.2"
+# Expected Output :
+# Letters 6 
+# Digits 2
+
+#SOURCE CODE:
+
+name = "Python 3.2"
+letters = 0
+digits = 0
+
+for i in name:
+    if i.isdigit():
+        digits += 1
+    elif i.isalpha():
+        letters += 1
+    else:
+        pass
+
+print("Letters:", letters)
+print("Digits:", digits)
+
+
+#PROBLEM - 36
+
+# Count the number of even and odd numbers from a series of numbers
+# Input 
+# numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) # Declaring the tuple
+# Output
+# Number of even numbers : 4                                                                                    
+# Number of odd numbers : 5
+
+#SOURCE CODE:
+
+num =  (1, 2, 3, 4, 5, 6, 7, 8, 9)
+even = 0
+odd= 0
+for i in num:
+    if i%2==0:
+        even+=1 
+    else:
+        odd+=1 
+print("even :",even)
+print("odd :",odd)
+
+
+
+#PROBLEM - 37
+
+# Write a Python program to get the Fibonacci series between 0 to 50 
+
+#SOURCE CODE :
+
+a = 0
+b = 1 
+
+while a<=50:
+    print(a,end=" ")
+    a,b=b,a+b
+
+#PROBLEM - 38
+
+#find number
+#  Write a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700
+
+#METHOD -1 
+
+for i in range(1500,2700):
+    if i%5 == 0 and i%7==0:
+        print(i,end=",")
+
+ #METHOD -2
+
+ n=[]
+for i in range(1500,2700):
+    if i%5 == 0 and i%7==0:
+        n.append(str(i))
+        print(i,end=",")
+
+
+
+
+#PROBLEM - 39 
+
+# Generate a random number between 1 and 9 (including 1 and 9).
+# Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. 
+
+
+import random
+number = random.randint(1,9)
+guess=0
+count=0
+
+while guess != number and guess != 'exit':
+    guess = input("what's your guess: ")
+    
+    if guess == 'exit':
+        break
+    guess = int(guess)
+    count +=1 
+    
+    if guess<number:
+        print("To Low!")
+    elif guess>number:
+        print("To High")
+    else:
+        print("you got it!")
+        print("And it only took you",count,"tries!")
+
+
+
+#PROBLEM - 40
+
+# Write a Python program to check the validity of a password (input from users).
+# Validation :
+# At least 1 letter between [a-z] and 1 letter between [A-Z].
+# At least 1 number between [0-9].
+# At least 1 character from [$#@].
+# Minimum length 6 characters.
+# Maximum length 16 characters.
+# Input
+# W3r@100a
+# Output
+# Valid password
+
+
+import re 
+
+password = input("Enter the password : ")
+
+if(6<=len(password) <= 16 and
+    re.search(r"[a-z]",password) and
+    re.search(r"[A-Z]",password) and
+    re.search(r"[0-9]",password) and
+        re.search(r"[$#@]",password)):
+            
+            print("Valid password")
+else:
+    print("Invalid password")
+
+
+
+#PROBLEM - 41
+
+# Write a Python program to check a triangle is equilateral, isosceles or scalene.
+# Note :
+# An equilateral triangle is a triangle in which all three sides are equal.
+# A scalene triangle is a triangle that has three unequal sides.
+# An isosceles triangle is a triangle with (at least) two equal sides.
+
+x = int(input("x: "))
+y = int(input("y: "))
+z = int(input("z: "))
+
+if x == y == z:
+    print("Equalitrial Triangle")
+elif x != y != z:
+    print("Scalene Triangle")
+else:
+    print("isosceles triangle")
+
+
+
+ #PROBLEM - 42 :
+
+ # Write a Python program to check whether an alphabet is a vowel or consonant
+
+ #METHOD - 1
+
+string = input("Enter a string: ")
+vowels_list = "AEIOUaeiou"
+vowels = 0
+consonants = 0
+
+for i in string:
+    if i.isalpha():
+        if i in vowels_list:
+            vowels += 1
+        else:
+            consonants += 1
+
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+
+
+
+#METHOD - 2
+
+ # Write a Python program to check whether an alphabet is a vowel or consonant
+l = input("Input a letter of the alphabet: ")
+if l in ('a', 'e', 'i', 'o', 'u'):
+    print("%s is a vowel." % l)
+elif l == 'y':
+    print("Sometimes letter y stand for vowel, sometimes stand for consonant.")
+else:
+    print("%s is a consonant." % l) 
+
+
+
+#PROBLEM - 43
+
+ # Convert a list of characters into a string
+# Input ['a', 'b', 'c', 'd']
+# Output abcd
+
+l=['a','b','c','d']
+for i in l:
+    print(i,end="")
+
+ # Convert a list of characters into a string
+# Input ['a', 'b', 'c', 'd']
+# Output abcd
+s = ['a', 'b', 'c', 'd']
+str1 = ''.join(s)
+print(str1)
+
+    
 
 
 
