@@ -912,21 +912,124 @@ s = ['a', 'b', 'c', 'd']
 str1 = ''.join(s)
 print(str1)
 
-    
 
-
-
-
-
-
-
+#PROBLEM - 44
 
  
+ # Write a Python program to check whether a list contains a sublist.
+# Input
+# a = [2,4,3,5,7]
+# b = [4,3]
+# c = [3,7]
+# print(is_Sublist(a, b))
+# print(is_Sublist(a, c))
+# Output
+# True
+# False
+ 
+def is_Sublist(main_list,sub_list):
+    n=len(sub_list)
+    for i in range(len(main_list)-n+1):
+        if main_list[i:i+n] == sub_list:
+            return True
+    return False
+    
+    
+a = [2,4,3,5,7]
+b = [4,3]
+c = [3,7]
+print(is_Sublist(a, b))
+print(is_Sublist(a, c))
+
+
+#PROBLEM - 45
+
+ # Write a Python program to find common items from two lists.
+# input
+# color1 = "Red", "Green", "Orange", "White"
+# color2 = "Black", "Green", "White", "Pink"
+# output
+# {'Green', 'White'}
+
+
+# Input lists
+color1 = ["Red", "Green", "Orange", "White"]
+color2 = ["Black", "Green", "White", "Pink"]
+
+# Find common items using set intersection
+common_colors = set(color2) & set(color1)
+
+# Output
+print(common_colors)
+
+
+#PROBLEM - 46
+
+# Write a Python program to get the difference between the two lists
+# Input 
+# list1 = [1, 2, 3, 4]
+# list2 = [1, 2]
+# Output
+# [3,4]
+
+
+list1 = [1, 2, 3, 4]
+list2 = [1, 2]
+print(set(list1) - set(list2))
+
+
+#PROBLEM - 47
+
+# Write a Python program to get the smallest number from a list.
+# max_num_in_list([1, 2, -8, 0])
+# return 2
+
+def max_num_in_list(list):
+    max = list[0]
+    for i in list:
+        if i>max:
+            max=i
+    return max
+print(max_num_in_list([1, 2, -8, 0]))
 
 
 
+#PROBLEM - 48 
+
+# Write a Python program to get the frequency of the elements in a list.
+# input
+# my_list = [10,10,10,10,20,20,20,20,40,40,50,50,30]
+# outout
+# {10: 4, 20: 4, 40: 2, 50: 2, 30: 1}
+import collections
+my_list = [10,10,10,10,20,20,20,20,40,40,50,50,30]
+print("Orginal List:",my_list)
+result=collections.Counter(my_list)
+print("frequency of the elements in a list: ",result)
+      
+#PROBLEM - 49
+
+#  Write a Python program to generate all permutations of a list in Python
+# Input [1,2,3]
+# Output [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]
+import itertools
+print(list(itertools.permutations([1,2,3])))
 
 
+#PROBLEM - 50 
+
+# Write a Python program to remove duplicates from a list.
+# Input a = [10,20,30,20,10,50,60,40,80,50,40]
+# Output {40, 10, 80, 50, 20, 60, 30} 
+
+a = [10,20,30,20,10,50,60,40,80,50,40]
+dup_items = set()
+uniq_items = []
+for x in a:
+    if x not in dup_items:
+        uniq_items.append(x)
+        dup_items.add(x)
+print(uniq_items)
 
 
 
